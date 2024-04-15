@@ -1,5 +1,5 @@
 CC      = gcc
-CFLAGS  = -Wall -g
+CFLAGS  = -Wall
 RM      = rm -f
 TARGETS = fib
 
