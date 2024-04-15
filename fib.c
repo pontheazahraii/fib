@@ -37,10 +37,10 @@ int main(int argc, char *argv[]) {
         for (unsigned int j = 0; j < strlen(argv[i]); j++) {
             assert(isdigit(argv[i][j]));
         }
-        // Convert the input characters to a number
+        // Convert the input character(s) to an integer
         int input = atoi(argv[i]);
         assert(input >= 0);
-        // Print the Fibonacci number at the specified index
+        // Print the Fibonacci number of the input value
         printf("%d: %d\n", input, fib(input));
     }
 
