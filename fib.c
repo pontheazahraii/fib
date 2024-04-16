@@ -14,6 +14,8 @@ unsigned int fib(unsigned int n) {
     return fib(n - 1) + fib(n - 2);
 }
 
+// cool feature
+
 // main function more comment
 int main(int argc, char *argv[]) {
     // If no arguments were supplied, print a few Fibonacci numbers
