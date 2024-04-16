@@ -14,6 +14,8 @@ unsigned int fib(unsigned int n) {
     return fib(n - 1) + fib(n - 2);
 }
 
+// this is a comment
+
 // cool feature
 //what a cool feature 
 // main function more comment
