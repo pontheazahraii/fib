@@ -1,4 +1,3 @@
-#include <assert.h>
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -33,11 +32,17 @@ int main(int argc, char *argv[]) {
         for (unsigned int i = 1; i < argc; i++) {
             // Check that the argument supplied contains a valid number
             for (unsigned int j = 0; j < strlen(argv[i]); j++) {
-                assert(isdigit(argv[i][j]));
+                if (!isdigit(argv[i][j])) {
+                    printf("Error: arguments must be valid numbers.");
+                    return 1;
+                }
             }
             // Convert the input character(s) to an integer
             int input = atoi(argv[i]);
-            assert(input >= 0);
+            if (!(input >= 0)) {
+                printf("Error: arguments must be positive numbers.");
+                return 1;
+            }
             // Print the Fibonacci number of the input value
             printf("%d: %d\n", input, fib(input));
         }
